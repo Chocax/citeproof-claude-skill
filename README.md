@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/assets/social-preview.png" alt="CiteProof — Every citation, with proof" width="100%">
+
 # 📎 CiteProof
 
 **Every citation, with proof.**
