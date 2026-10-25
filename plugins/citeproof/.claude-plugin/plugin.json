@@ -1,0 +1,13 @@
+{
+  "name": "citeproof",
+  "version": "1.0.0",
+  "description": "Write documents with APA 7 or IEEE citations backed by verifiable sources, with automatic screenshots or capture notes (clickable link + Ctrl+F fragment) for every citation.",
+  "author": {
+    "name": "Santiago Pinzón Vásquez",
+    "url": "https://github.com/Chocax"
+  },
+  "homepage": "https://github.com/Chocax/citeproof-claude-skill",
+  "repository": "https://github.com/Chocax/citeproof-claude-skill",
+  "license": "MIT",
+  "keywords": ["citations", "apa", "ieee", "references", "academic", "research", "screenshots", "docx"]
+}

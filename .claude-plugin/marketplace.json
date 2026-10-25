@@ -1,0 +1,15 @@
+{
+  "name": "citeproof",
+  "description": "CiteProof: academic documents where every citation comes with proof (APA 7 / IEEE).",
+  "owner": {
+    "name": "Santiago Pinzón Vásquez (Chocax)",
+    "url": "https://github.com/Chocax"
+  },
+  "plugins": [
+    {
+      "name": "citeproof",
+      "source": "./plugins/citeproof",
+      "description": "Write documents with APA 7 or IEEE citations backed by verifiable sources, with automatic screenshots or capture notes (clickable link + Ctrl+F fragment) for every citation."
+    }
+  ]
+}
