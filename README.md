@@ -34,7 +34,7 @@ A skill for Claude that writes academic documents in **APA 7** or **IEEE** where
 
 ## Why CiteProof?
 
-More and more instructors ask students to **prove** their citations: screenshots of the source, "dynamic references", only verifiable and recognizable sources, no Wikipedia or ResearchGate. Doing that by hand for 30 citations is tedious, and asking an AI for it gives a different format every time.
+A citation is only as good as your ability to show that the source really says it. Finding a solid source for every claim, formatting it correctly and keeping proof of the exact passage takes hours when done by hand, and asking an AI for it gives invented references or a different format every time.
 
 CiteProof makes that workflow repeatable:
 
@@ -102,14 +102,14 @@ Pick where you use Claude. Click to expand.
 Inside Claude Code:
 
 ```text
-/plugin marketplace add Chocax/citeproof
+/plugin marketplace add Chocax/citeproof-claude-skill
 /plugin install citeproof@citeproof
 ```
 
 Or from your terminal:
 
 ```bash
-claude plugin marketplace add Chocax/citeproof
+claude plugin marketplace add Chocax/citeproof-claude-skill
 claude plugin install citeproof@citeproof
 ```
 
@@ -125,9 +125,9 @@ Updates arrive when you update the marketplace (`/plugin` → Marketplaces).
 <br>
 
 ```bash
-git clone https://github.com/Chocax/citeproof.git
+git clone https://github.com/Chocax/citeproof-claude-skill.git
 mkdir -p ~/.claude/skills
-cp -r citeproof/plugins/citeproof/skills/citeproof ~/.claude/skills/
+cp -r citeproof-claude-skill/plugins/citeproof/skills/citeproof ~/.claude/skills/
 ```
 
 Restart Claude Code. The skill lives in `~/.claude/skills/citeproof/`.
@@ -156,7 +156,7 @@ On Claude.ai the sandbox often can't reach external websites, so CiteProof falls
 
 Just ask. You don't need to name the skill:
 
-> *"Write a Word report on carbon capture with APA citations and a capture note for every source. No Wikipedia, at least five peer-reviewed articles."*
+> *"Write a Word report on carbon capture with APA citations and a capture note for every source. At least five peer-reviewed articles."*
 
 > *"Draft my related-work section in IEEE style. Take the screenshots yourself and leave a note when you can't."*
 
@@ -176,19 +176,19 @@ More in **[examples/prompts.md](examples/prompts.md)**.
 
 CiteProof **always** applies a baseline: every source must be **verifiable** (Claude opened it and you can too), **veridical** (the quoted text is really there) and **recognizable** (a credible author or publisher).
 
-On top of that, **you** set the rules for each assignment. Write them in your request, or save them once in your project or custom instructions:
+On top of that, **you** set the rules for each document. Write them in your request, or save them once in your project or custom instructions:
 
 ```text
 CiteProof rules:
 - Style: APA 7, in Spanish
-- No Wikipedia, no ResearchGate
-- Definitions only from NIST, ANSI, ISO or IEEE
-- Include standards, peer-reviewed articles (any quartile) and patents
-- Look for the Gartner Magic Quadrant and leaders of the technology
+- Only sources from the last 5 years
+- Definitions from official standards bodies
+- Include at least 5 peer-reviewed articles
+- No blogs or forums
 - Evidence: manual notes
 ```
 
-If a rule can't be met (for example, no Magic Quadrant exists for the topic), CiteProof says so instead of inventing one.
+If a rule can't be met (for example, there are no peer-reviewed studies on a very new topic), CiteProof says so instead of inventing one.
 
 ## Evidence modes
 
@@ -225,15 +225,15 @@ Because they were written as plain text. CiteProof writes every URL as a real hy
 </details>
 
 <details>
-<summary><b>Is it allowed by my university?</b></summary>
+<summary><b>Can I use it for school or work?</b></summary>
 
-CiteProof helps you find, cite and prove sources. Check your institution's policy on AI-assisted writing, and always read the sources you cite.
+CiteProof helps you find, cite and prove sources. Check your organization's policy on AI-assisted writing, and always read the sources you cite.
 </details>
 
 ## Repository layout
 
 ```text
-citeproof/
+citeproof-claude-skill/
 ├── .claude-plugin/marketplace.json      # makes the repo installable in Claude Code
 ├── plugins/citeproof/
 │   ├── .claude-plugin/plugin.json

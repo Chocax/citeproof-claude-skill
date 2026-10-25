@@ -34,7 +34,7 @@ Una skill para Claude que escribe documentos académicos en **APA 7** o **IEEE**
 
 ## ¿Por qué CiteProof?
 
-Cada vez más profesores piden **demostrar** las citas: capturas de la fuente, "referencias dinámicas", solo fuentes verificables y reconocibles, nada de Wikipedia ni ResearchGate. Hacerlo a mano para 30 citas es una lata, y pedírselo a una IA da un formato distinto cada vez.
+Una cita vale lo que puedas demostrar que la fuente de verdad lo dice. Encontrar una fuente sólida para cada afirmación, darle el formato correcto y guardar la prueba del fragmento exacto toma horas a mano, y pedírselo a una IA da referencias inventadas o un formato distinto cada vez.
 
 CiteProof vuelve ese proceso repetible:
 
@@ -156,7 +156,7 @@ En Claude.ai el entorno muchas veces no puede entrar a sitios externos, así que
 
 Solo pídelo, no hace falta nombrar la skill:
 
-> *"Hazme un documento en Word sobre gemelos digitales con citas APA y notas para sacar las capturas. Nada de Wikipedia ni ResearchGate, y definiciones de NIST, ISO, IEEE o ANSI."*
+> *"Hazme un documento en Word sobre energías renovables con citas APA y notas para sacar las capturas. Mínimo cinco artículos científicos."*
 
 > *"Escribe el estado del arte de mi paper en formato IEEE. Toma tú las capturas y déjame la nota cuando no puedas."*
 
@@ -176,19 +176,19 @@ Más ejemplos en **[examples/prompts.md](examples/prompts.md)**.
 
 CiteProof **siempre** aplica una base: toda fuente debe ser **verificable** (Claude la abrió y tú también puedes), **verídica** (el texto citado de verdad está ahí) y **reconocible** (un autor o editor creíble).
 
-Encima de eso, **tú** pones las reglas de cada trabajo. Escríbelas en tu solicitud o guárdalas una vez en las instrucciones de tu proyecto o en tus preferencias:
+Encima de eso, **tú** pones las reglas de cada documento. Escríbelas en tu solicitud o guárdalas una vez en las instrucciones de tu proyecto o en tus preferencias:
 
 ```text
 Reglas CiteProof:
 - Estilo: APA 7, en español
-- Nada de Wikipedia ni ResearchGate
-- Definiciones solo de NIST, ANSI, ISO o IEEE
-- Incluir normas, artículos científicos (cualquier cuartil) y patentes
-- Buscar el Cuadrante Mágico de Gartner y los líderes de la tecnología
+- Solo fuentes de los últimos 5 años
+- Definiciones de organismos oficiales de normalización
+- Incluir mínimo 5 artículos científicos
+- Nada de blogs ni foros
 - Evidencia: notas manuales
 ```
 
-Si alguna regla no se puede cumplir (por ejemplo, no existe cuadrante mágico para el tema), CiteProof lo dice en vez de inventarlo.
+Si alguna regla no se puede cumplir (por ejemplo, no hay estudios científicos sobre un tema muy nuevo), CiteProof lo dice en vez de inventarlo.
 
 ## Modos de evidencia
 
@@ -225,9 +225,9 @@ Porque estaban escritos como texto plano. CiteProof escribe cada URL como un hip
 </details>
 
 <details>
-<summary><b>¿Mi universidad lo permite?</b></summary>
+<summary><b>¿Puedo usarlo para estudio o trabajo?</b></summary>
 
-CiteProof te ayuda a encontrar, citar y demostrar fuentes. Revisa la política de tu institución sobre escritura asistida por IA y lee siempre las fuentes que citas.
+CiteProof te ayuda a encontrar, citar y demostrar fuentes. Revisa la política de tu institución o empresa sobre escritura asistida por IA y lee siempre las fuentes que citas.
 </details>
 
 ## Estructura del repositorio

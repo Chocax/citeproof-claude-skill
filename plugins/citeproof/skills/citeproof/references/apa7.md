@@ -53,4 +53,4 @@ Gartner. (2025, September 10). *Gartner unveils top emerging technologies to sup
 Stablecoin Beat. (2026). *Stablecoin market cap tracker*. Retrieved October 24, 2026, from https://stablecoinbeat.com/tracker/
 
 **Figure reproduced from a source** (caption)
-*Figura 2.* Hype Cycle for Emerging Technologies, 2025. Fuente: Gartner (2025a).
+*Figura 2.* Título descriptivo de la figura. Fuente: Autor u organización (2025a).

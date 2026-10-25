@@ -1,6 +1,6 @@
 ---
 name: citeproof
-description: Write academic or professional documents (reports, essays, research papers, state-of-the-art reviews, theoretical frameworks, university assignments) where every claim is backed by a verifiable, recognizable source, cited in APA 7 or IEEE, and paired with proof the reader can check — either an automatic screenshot of the exact passage or a highlighted "capture note" with a clickable link and the verbatim text to find with Ctrl+F. Use this skill whenever the user asks for a document "with references", "con fuentes", "con citas APA/IEEE", "con hipervínculos en las citas", "con capturas de las fuentes", wants sources they can verify or screenshot, mentions instructor rules about allowed sources (e.g. no Wikipedia/ResearchGate, standards like NIST/ISO/IEEE, peer-reviewed articles, patents), or asks to add verifiable citations to a document they already wrote — even if they never say "CiteProof".
+description: Write academic or professional documents (reports, essays, research papers, literature reviews, white papers, theses) where every claim is backed by a verifiable, recognizable source, cited in APA 7 or IEEE, and paired with proof the reader can check — either an automatic screenshot of the exact passage or a highlighted "capture note" with a clickable link and the verbatim text to find with Ctrl+F. Use this skill whenever the user asks for a document "with references", "con fuentes", "con citas APA/IEEE", "con hipervínculos en las citas", "con capturas de las fuentes", wants sources they can verify or screenshot, gives rules about allowed sources (banned sites, required source types such as standards, peer-reviewed articles or patents, date ranges), or asks to add verifiable citations to a document they already wrote — even if they never say "CiteProof".
 ---
 
 # CiteProof
@@ -10,7 +10,7 @@ CiteProof produces documents where **every citation can be proven**. Each citati
 - **Auto mode:** Claude opens the source, highlights the exact passage and inserts a screenshot linked to the page.
 - **Manual mode:** Claude leaves a short highlighted note saying *which citation* the evidence belongs to, a **clickable** link, and the verbatim fragment to search with Ctrl+F, so the user can take the screenshot in seconds.
 
-The reason this matters: in academic work a citation is a promise that the source says what the text says. Students are increasingly asked to prove it (screenshots, "dynamic references"), and instructors reject sources that are not verifiable or recognizable. CiteProof turns that promise into checkable evidence and never lets a citation exist without a real, opened source behind it.
+The reason this matters: in academic work a citation is a promise that the source says what the text says. Readers, reviewers and graders increasingly ask for proof, and sources that are not verifiable or recognizable undermine the whole document. CiteProof turns that promise into checkable evidence and never lets a citation exist without a real, opened source behind it.
 
 Reply to the user in their language. Write notes and captions in the document's language, but keep verbatim fragments in the **source's original language** — that is what Ctrl+F will find.
 
@@ -23,11 +23,11 @@ Before researching, settle four things. Ask in a single short message only for w
 | Setting | Options | Default |
 |---|---|---|
 | Citation style | APA 7 · IEEE | APA 7 (IEEE if the field is engineering and the user hints at a paper/IEEE template) |
-| Source rules | The user's/instructor's rules: banned sources, required source types, minimum counts, date range | Only the baseline policy (Step 2) |
+| Source rules | The user's rules: banned sources, required source types, minimum counts, date range | Only the baseline policy (Step 2) |
 | Evidence mode | `auto` (Claude takes screenshots) · `manual` (capture notes) · `both` | `auto` when a browser is usable, otherwise `manual` — decided per source |
 | Output | .docx (default), Google Doc, Markdown, PDF…; language; length | .docx in the user's language |
 
-Source rules belong to the user, not to this skill: record them exactly as given (e.g. "no ResearchGate", "definitions only from NIST, ANSI, ISO or IEEE", "include patents and the Gartner Magic Quadrant if it exists") and apply them throughout. If the user keeps a rules file or has stated rules earlier in the conversation, reuse them instead of asking again. Mention once that they can save their usual rules (for example in a `citeproof-rules.md` they attach or in their project instructions) so future documents start configured.
+Source rules belong to the user, not to this skill: record them exactly as given (e.g. "no blogs", "definitions only from official standards bodies", "include at least two patents") and apply them throughout. If the user keeps a rules file or has stated rules earlier in the conversation, reuse them instead of asking again. Mention once that they can save their usual rules (for example in a `citeproof-rules.md` they attach or in their project instructions) so future documents start configured.
 
 ## Step 2 — Baseline source policy (always on)
 
@@ -37,7 +37,7 @@ Whatever the user's rules, every source must be:
 2. **Veridical** — the text you attribute to it is really there (you copied the fragment from the page, not from memory), and it is current enough for the claim.
 3. **Recognizable** — the author or publisher is identifiable and credible for that kind of claim (standards bodies, peer-reviewed journals, patent offices, governments and intergovernmental bodies, recognized analysts, the organizations that lead the technology, reputable press).
 
-Read `references/source-policy.md` for the source tiers, red flags and how to swap a weak source (Wikipedia, ResearchGate copies, content farms, AI-generated pages, undated blogs) for the original. When a user rule is stricter than the baseline, the user rule wins; when a user rule would force an unverifiable source, explain the conflict instead of complying silently.
+Read `references/source-policy.md` for the source tiers, red flags and how to swap a weak source (open-edit encyclopedias, re-uploaded copies on academic social networks, content farms, AI-generated pages, undated blogs) for the original. When a user rule is stricter than the baseline, the user rule wins; when a user rule would force an unverifiable source, explain the conflict instead of complying silently.
 
 ## Step 3 — Research and keep an evidence ledger
 
@@ -58,7 +58,7 @@ If a source cannot be opened (paywall, blocked site, live dashboard), you may st
 - Write the content first, then attach evidence. Keep it as long as the user asked — evidence notes are not an excuse to pad, and a request for "short" means short.
 - Cite in the chosen style. Read `references/apa7.md` or `references/ieee.md` for in-text forms and reference-list formats by source type (standards, patents, press releases, same author/same year, no date, organizations as authors…).
 - Every in-text citation must have exactly one reference-list entry and vice versa.
-- Figures and images taken from sources get a numbered caption with the source cited ("Figure 2. … Source: Gartner (2025a)") and their own evidence note pointing to the page that publishes them.
+- Figures and images taken from sources get a numbered caption with the source cited ("Figure 2. … Source: WHO (2024a)") and their own evidence note pointing to the page that publishes them.
 
 ## Step 5 — Evidence for each citation
 
@@ -82,7 +82,7 @@ Ctrl+F: «a unified, coherent product that encapsulates both the storage of digi
 
 Rules that make the note useful:
 
-- **Line 1 names the exact citation as it appears in the text** — `(Gartner, 2025a)`, `Weber y Staples (2022)`, `[7]` — plus the section if the same citation appears more than once. That tells the user where to attach the hyperlink after pasting the screenshot.
+- **Line 1 names the exact citation as it appears in the text** — `(WHO, 2024a)`, `Weber y Staples (2022)`, `[7]` — plus the section if the same citation appears more than once. That tells the user where to attach the hyperlink after pasting the screenshot.
 - **The URL must be a real, clickable hyperlink** in the output format (in .docx use an actual hyperlink element, not plain text). Users open it with Ctrl+click; a plain-text URL silently breaks the workflow.
 - Line 2 is the verbatim fragment in the source's language, inside « ». Add a short tip after a `·` only when needed ("page is in Japanese", "live data: update the figure", "PDF: page 12").
 - Put one general note at the top of the document explaining the convention once (what the notes are, that they get deleted, and to search 4–5 consecutive words if the whole fragment isn't found).

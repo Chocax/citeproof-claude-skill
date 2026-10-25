@@ -14,12 +14,12 @@ The baseline every source must pass is **verifiable, veridical, recognizable** (
 | 2 | Technology leaders | Official docs, white papers and newsroom of the organizations that lead the field | What the technology does in practice |
 | 2 | Working papers from recognized institutions | Central bank staff papers, NBER, university labs (MIT, Stanford…) | Recent research not yet peer-reviewed — say so |
 | 3 | Reputable press and trade media | Major newspapers, specialized trade outlets with named authors | Recent events, local context |
-| ✗ | Avoid as a citation | Wikipedia, ResearchGate/Academia.edu copies, content farms, SEO listicles, AI-generated pages, undated or anonymous blogs, forums | Use only as leads to find the original |
+| ✗ | Avoid as a citation | Open-edit encyclopedias, re-uploaded copies on academic social networks, content farms, SEO listicles, AI-generated pages, undated or anonymous blogs, forums | Use only as leads to find the original |
 
 ## Replacing weak sources
 
-- **Wikipedia** → follow its footnotes to the original source and cite that.
-- **ResearchGate / Academia.edu** → these host copies. Find the publisher's page or DOI (search the exact title) and cite the publisher. If the work only exists there (an unpublished preprint), tell the user and let them decide.
+- **Open-edit encyclopedias** → follow their footnotes to the original source and cite that.
+- **Re-uploaded copies (academic social networks, file-sharing sites)** → these host copies. Find the publisher's page or DOI (search the exact title) and cite the publisher. If the work only exists there (an unpublished preprint), tell the user and let them decide.
 - **Paywalled article** → cite the publisher page with DOI and capture the abstract; if the claim needs the full text, use an open version (arXiv, institutional repository, PubMed Central) and cite the published version.
 - **Analyst reports behind paywalls (Gartner etc.)** → cite the free press release or the document's public abstract page, and capture that.
 - **Secondary news about a study** → cite the study itself when you can open it.
@@ -34,9 +34,9 @@ The baseline every source must pass is **verifiable, veridical, recognizable** (
 
 ## User rules
 
-Apply the user's or instructor's rules on top of this policy exactly as stated, for example:
+Apply the user's rules on top of this policy exactly as stated, for example:
 
-- "No ResearchGate" / "no Wikipedia" → never cite them, even as secondary.
-- "Definitions from NIST, ANSI, ISO or IEEE" → definitions section must cite at least one of these; if none defines the exact term, say so and define it from the components they do standardize.
-- "Include patents / standards / Magic Quadrant" → include them, and if one genuinely doesn't exist (e.g. no Magic Quadrant for an emerging technology), state that you searched and found none, and offer the closest alternative.
+- "No <site>" → never cite it, even as secondary.
+- "Definitions only from <bodies>" → the definitions section must cite at least one of them; if none defines the exact term, say so and define it from the components they do standardize.
+- "Include patents / standards / an analyst report" → include them, and if one genuinely doesn't exist for the topic, state that you searched and found none, and offer the closest alternative.
 - Minimum counts or date ranges → track them in the ledger and confirm in the final message.
